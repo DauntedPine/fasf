@@ -48,11 +48,12 @@ def get_user_input():
         user_input = input('Enter your text with words separated by space: ')
         decoded = decode(user_input.lower())
         most_likely = ' '.join([word[0] for word in decoded])
-        print('-----------')
-        print(f'\n\nMost likeley : {most_likely}')
         raw = ' '.join([word[0] if len(word) == 1 else '/'.join(word) for word in decoded])
+
+        print('\n\n-----------')
+        print(f'Most likeley : {most_likely}')
         print(f'Raw output: {raw}')
-        print('-----------')
+        print('-----------\n\n')
         
        
 if __name__ == '__main__':
